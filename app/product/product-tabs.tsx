@@ -6,14 +6,14 @@ export default function ProductTabs() {
   const [activeTab, setActiveTab] = useState<"description" | "review" | "qna">("description");
 
   return (
-    <div className="w-full max-w-[1320px] mx-auto my-10 font-sans">
-      {/* 1. Tab Headers Container */}
-      <div className="flex items-center gap-2 border-b border-gray-200 bg-[#f8f8f8] p-3">
+    <div className="w-full max-w-[1320px] mx-auto my-6 sm:my-10 font-sans px-4 sm:px-0">
+      {/* 1. Tab Headers Container (Scrollable on Mobile) */}
+      <div className="flex items-center gap-2 border-b border-gray-200 bg-[#f8f8f8] p-2 sm:p-3 overflow-x-auto no-scrollbar scroll-smooth">
         {/* Tab 1: Description */}
         <button
           type="button"
           onClick={() => setActiveTab("description")}
-          className={`px-8 py-3.5 text-[15px] font-medium transition-colors border rounded-xs cursor-pointer ${
+          className={`px-4 sm:px-8 py-2.5 sm:py-3.5 text-[13px] sm:text-[15px] font-medium transition-colors border rounded-xs cursor-pointer whitespace-nowrap shrink-0 ${
             activeTab === "description"
               ? "bg-white text-[#f28353] border-[#f28353]"
               : "bg-white text-[#555555] border-transparent hover:text-[#f28353]"
@@ -26,7 +26,7 @@ export default function ProductTabs() {
         <button
           type="button"
           onClick={() => setActiveTab("review")}
-          className={`px-8 py-3.5 text-[15px] font-medium transition-colors border rounded-xs cursor-pointer ${
+          className={`px-4 sm:px-8 py-2.5 sm:py-3.5 text-[13px] sm:text-[15px] font-medium transition-colors border rounded-xs cursor-pointer whitespace-nowrap shrink-0 ${
             activeTab === "review"
               ? "bg-white text-[#f28353] border-[#f28353]"
               : "bg-white text-[#555555] border-transparent hover:text-[#f28353]"
@@ -39,7 +39,7 @@ export default function ProductTabs() {
         <button
           type="button"
           onClick={() => setActiveTab("qna")}
-          className={`px-8 py-3.5 text-[15px] font-medium transition-colors border rounded-xs cursor-pointer ${
+          className={`px-4 sm:px-8 py-2.5 sm:py-3.5 text-[13px] sm:text-[15px] font-medium transition-colors border rounded-xs cursor-pointer whitespace-nowrap shrink-0 ${
             activeTab === "qna"
               ? "bg-white text-[#f28353] border-[#f28353]"
               : "bg-white text-[#555555] border-transparent hover:text-[#f28353]"
@@ -50,9 +50,9 @@ export default function ProductTabs() {
       </div>
 
       {/* 2. Tab Content Box */}
-      <div className="border border-gray-200 border-t-0 p-6 sm:p-10 bg-white text-[#777777] leading-relaxed text-[14px]">
+      <div className="border border-gray-200 border-t-0 p-4 sm:p-10 bg-white text-[#777777] leading-relaxed text-[13px] sm:text-[14px]">
         {activeTab === "description" && (
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 sm:gap-4">
             <p>
               &quot;Gym Coords Set&quot; offers a comprehensive solution for those seeking comfort and style in their workout attire. This coordinated set is meticulously designed to elevate your gym experience, blending functionality with fashion seamlessly. Crafted from high-quality, breathable fabrics, each piece in the set ensures optimal performance and comfort during your exercise routines.
             </p>
@@ -67,14 +67,14 @@ export default function ProductTabs() {
 
         {activeTab === "review" && (
           <div className="py-2">
-            <h3 className="text-[16px] font-bold text-[#222222] mb-2">Customer Reviews</h3>
+            <h3 className="text-[15px] sm:text-[16px] font-bold text-[#222222] mb-2">Customer Reviews</h3>
             <p>There are no reviews yet for this product.</p>
           </div>
         )}
 
         {activeTab === "qna" && (
           <div className="py-2">
-            <h3 className="text-[16px] font-bold text-[#222222] mb-2">Questions &amp; Answers</h3>
+            <h3 className="text-[15px] sm:text-[16px] font-bold text-[#222222] mb-2">Questions &amp; Answers</h3>
             <p>Have a question about this item? Ask below.</p>
           </div>
         )}

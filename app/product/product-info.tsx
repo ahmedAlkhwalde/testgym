@@ -158,7 +158,7 @@ export default function ProductInfo({
       </div>
 
       {/* 9. Secure Checkout Box */}
-      <div className="relative border border-dashed border-gray-300 rounded-sm p-4 pt-6">
+      <div className="relative border border-dashed border-gray-300 rounded-sm p-4 pt-6 mt-5">
         {/* العنوان الثابت فوق الإطار المنقط */}
         <span className="absolute -top-3 left-4 bg-white px-2 font-bold text-xs sm:text-[14px] text-[#222222] whitespace-nowrap">
           Secure Checkout
