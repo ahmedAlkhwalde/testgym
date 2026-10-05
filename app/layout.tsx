@@ -2,6 +2,7 @@ import { Cairo, Tajawal } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Navbar/>
       <body>{children}</body>
       <Footer/>
+      <ScrollToTop/>
     </html>
   );
 }
